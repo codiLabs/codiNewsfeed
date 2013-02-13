@@ -1,73 +1,126 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Codinewsfeed by codiLabs</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>HOME :: codiLabs &mdash; The Art of the Logician</title>
+  <style>
+  	@import url(http://fonts.googleapis.com/css?family=Magra);
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/codiLabs/codiNewsfeed">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/codiLabs/codiNewsfeed/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/codiLabs/codiNewsfeed/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+		html, body {
+		  padding: 0;
+		  margin: 0;
+		}
 
-    <div class="wrapper">
+		body {
+			background-color: #ffffff;
+			min-width: 960px;
+			font-size: 12px;
+			font-family: "Magra", Arial, Verdana;
+			color: #444444;
+		}
 
-      <section>
-        <div id="title">
-          <h1>codiNewsfeed</h1>
-          <p>I'm jQuery plugin for Sliding Notifications</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/codiLabs">codiLabs</a></span>
-          <span class="credits right">Goto <a href="http://codiLabs.com">codiLabs's Website</a></span>
-        </div>
+		header {
+			height: 100px;
+			background: #eeeeee;
+			position: relative;
+			z-index: 99;
+		}
+			header .logoarea {
+				height: 62px;
+				padding: 19px 20px 19px 40px;
+				width: 242px;
+				background: transparent;
+				position: relative;
+			}
+				header .logoarea #logo {
+					background-color: transparent;
+					background-image: url('images/codilabs.png');
+					background-position: center center;
+					background-repeat: no-repeat;
+					border-width: 1px 1px 0 1px;
+					border-style: solid;
+					border-color: transparent;
+					height: 60px;
+					width: 200px;
+					cursor: pointer;
+					border-radius: 3px 3px 0 0;
+					position: absolute;
+				}
+				header .logoarea #homemenu {
+					width: 280px;
+					height: 200px;
+					position: absolute;
+					top: 84px;
+					left: 30px;
+					background-color: #fafafa;
+					border: 1px solid #aaaaaa;
+					border-radius: 0 0 3px 3px;
+					box-shadow: 0 0 2px 0 #aaaaaa;
+					padding: 8px 1px 1px 1px;
+				}
+					header .logoarea #homemenu .headermenu {
+						background-color: #cccccc;
+						padding: 4px;
+					}
+			header .github {
+				width: 149px;
+				height: 149px;
+				position: absolute;
+				top: -4px;
+				right: -4px;
+				background: transparent url('images/fork.png') top right no-repeat;
+				cursor: pointer;
+			}
 
-        <h3>Welcome to GitHub Pages.</h3>
+		#news {
+			background: #222222;
+			height: 40px;
+			padding: 20px;
+			border-bottom: 2px solid #ffffff;
+			text-align: center;
+		}
+			#news #news-bigtext {
+				padding: 0px;
+				font-size: 36px;
+				color: #dddddd;
+				font-weight: bold;
+			}
+			#news #news-smalltext {
+				padding: 8px;
+				font-size: 24px;
+				line-height: 24px;
+				color: #bbbbbb;
+			}
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		#content {
+			border-top: 4px solid #222222;
+			padding: 10px 30px;
+		}
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+		.clear-fix {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+  <div id="wraper">
+    <header>
+      <div class="logoarea">
+        <div id="logo"></div>
+      </div>
+      <div class="github" onClick="location.href='https://github.com/codiLabs/codiNewsfeed'"></div>
+    </header>
+    <section id="news">
+      <span id="news-bigtext">codiNewsfeed, </span>
+      <span id="news-smalltext">I'm jQuery plugin for Sliding Notifications...</span>
+    </section>
+    <section id="content">
+      <br/><br/><br/><br/>
+      
+    </section>
+    <footer>
+      
+    </footer>
+  </div>
+</body>
 </html>
